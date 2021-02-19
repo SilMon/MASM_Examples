@@ -23,7 +23,7 @@
  ; The message to print
  message BYTE "Hello World from MASM!", 0Ah ;0Ah means new line, equal to \n in Java/C
  ; Number of chars to write -> length of message
- lmessage DWORD 16
+ lmessage DWORD 23
 
  ; Define the code to execute
  .code
