@@ -1,4 +1,4 @@
-; Hello World program using the win32 API
+; Example to illustrate the definition and usage of procedures
 .386
 .MODEL flat, stdcall
 ; Define output handle  -> predefined constant see (https://docs.microsoft.com/de-de/windows/console/getstdhandle)
