@@ -26,7 +26,7 @@ bytesWritten DWORD ?
 .code
 ; Define main function
 main PROC
-# Call the defined printing function with message, length of message
+; Call the defined printing function with message, length of message
 CALL print "Example for procedure definition and calling!", 45
 ; Finsih the main function
 main ENDP
