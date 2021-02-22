@@ -8,19 +8,19 @@
 			.model flat, c
 			.stack 100h
 ; Define prototypes of printf and scanf function
-printf		PROTO arg1:PTR BYTE, printlist:VARARG
-scanf		PROTO arg2:PTR BYTE, inputlist:VARARG
+printf			PROTO arg1:PTR BYTE, printlist:VARARG
+scanf			PROTO arg2:PTR BYTE, inputlist:VARARG
 			.data
 ; Define all console messages and their formats
-msg1		BYTE "Please enter a number: ", 0
-msg2		BYTE "Little gauss: ", 0
-msg3		BYTE "Overflow occured, program aborted!", 0
-msg2fmt		BYTE "%s%d", 0
-in1fmt		BYTE "%d", 0
+msg1			BYTE "Please enter a number: ", 0
+msg2			BYTE "Little gauss: ", 0
+msg3			BYTE "Overflow occured, program aborted!", 0
+msg2fmt			BYTE "%s%d", 0
+in1fmt			BYTE "%d", 0
 ; Variable for the input number
-number		DWORD ?
+number			DWORD ?
 			.code
-main		proc
+main			proc
 			; Display input message
 			INVOKE printf, ADDR msg1
 			; Read the input number
@@ -30,7 +30,7 @@ main		proc
 			; Initialize ecx t ohold the 
 			MOV ecx, 1
 			; Calculate the little gauss for the given number
-while01:	CMP ecx, number
+while01:		CMP ecx, number
 			; If the index is greater than number, jump to the end of the loop
 			JG endwh01
 			; Add the value of ecx to eax
@@ -42,11 +42,11 @@ while01:	CMP ecx, number
 			; Jump back to the start for a new run
 			JMP while01
 			; If overflow occured, inform the user
-endwh01:	INVOKE printf, ADDR msg2fmt, ADDR msg2, eax
+endwh01:		INVOKE printf, ADDR msg2fmt, ADDR msg2, eax
 			; Jump to the end of the function
 			jmp mainret
 			; If no overflow occured, display little gauss
-endwh02:	INVOKE printf, ADDR msg3
-mainret:	RET
-main		endp
+endwh02:		INVOKE printf, ADDR msg3
+mainret:		RET
+main			endp
 			end
