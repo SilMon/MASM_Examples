@@ -8,3 +8,6 @@ This section contains general purpose programs like I/O or reading/writing files
 * _ProcedureDefinitionAndUsage_:  Example program to illustrate the usage of procedures and how to call them
 * _Input_Output_Example_:         Program showcasing how to read from and write to the console using C functions
 * _While_Loop_Example_:           Program to show the usage of labels and jump and compare instructions to create a while loop
+
+## Recommended Books:
+* https://doi.org/10.1007/978-3-030-35639-2_6
