@@ -10,4 +10,4 @@ This section contains general purpose programs like I/O or reading/writing files
 * _While_Loop_Example_:           Program to show the usage of labels and jump and compare instructions to create a while loop
 
 ## Recommended Books:
-* https://doi.org/10.1007/978-3-030-35639-2_6
+* https://doi.org/10.1007/978-3-030-35639-2
